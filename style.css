@@ -4,6 +4,14 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body{
+    background-color: beige;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  
+}
+
 a{
     text-decoration: none;
     color: grey;
@@ -15,18 +23,15 @@ a{
 }
 
 .header, .footer{
+    padding: 24px;
+    gap: 12px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: rgb(255, 255, 255);
 }
 
-body{
-    background-color: beige;
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;    
-}
+
 
 .options{
     display: flex;
@@ -38,12 +43,14 @@ body{
 
 .content{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center; 
+    box-sizing: border-box;
+    gap: 40px;
     flex: 1;
-    gap: 30px;
-    margin: 10px auto;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    overflow: scroll;
 }
 
 #Color{
@@ -64,6 +71,7 @@ h1{
 .grid{
     display: flex;
     justify-content: center;
+    align-self: center;
     flex-wrap: wrap;
     background-color: white;
 }
