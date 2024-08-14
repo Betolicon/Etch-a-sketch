@@ -23,15 +23,12 @@ a{
 }
 
 .header, .footer{
-    padding: 24px;
-    gap: 12px;
+    padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
 }
-
-
 
 .options{
     display: flex;
@@ -45,12 +42,12 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    box-sizing: border-box;
-    gap: 40px;
+    flex-wrap: wrap;
     flex: 1;
     margin-top: 14px;
     margin-bottom: 14px;
-    overflow: scroll;
+    overflow: auto;
+    gap: 16px;
 }
 
 #Color{
@@ -71,7 +68,6 @@ h1{
 .grid{
     display: flex;
     justify-content: center;
-    align-self: center;
     flex-wrap: wrap;
     background-color: white;
 }
