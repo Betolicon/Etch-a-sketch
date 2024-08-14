@@ -7,14 +7,25 @@
 a{
     text-decoration: none;
     color: grey;
+
+}
+.footer{
+    padding: 10px;
+}
+.header, .footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
 }
 
 body{
     background-color: beige;
+    margin: 0;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column;    
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .options{
@@ -29,7 +40,7 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 50px;
 }
 
 #Color{
@@ -44,7 +55,6 @@ body{
 }
 
 h1{
-    text-align: center;
     margin: 10px auto;
 }
 .grid{
@@ -52,7 +62,6 @@ h1{
     justify-content: center;
     flex-wrap: wrap;
     background-color: white;
-    margin: 30px auto;
 }
 
 button{
