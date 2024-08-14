@@ -10,6 +10,7 @@ const Normal = document.querySelector('#Normal')
 const Rainbow = document.querySelector('#Rainbow')
 const Color = document.querySelector('#Color')
 const Eraser = document.querySelector('#Eraser')
+const Clear = document.querySelector('#Clear')
 let value = document.querySelector('#containerValue')
 
 Color.oninput = (e) => setColor(e.target.value)
@@ -18,12 +19,17 @@ slider.onchange = (e) => updateGrid(e.target.value)
 slider.onmousemove = (e) => updateValue(e.target.value)
 Normal.onclick = () => setMode('normal')
 Eraser.onclick = () => setMode('eraser')
+Clear.onclick = () => clearGrid()
 grid.style.width = grid.style.height = `${gridSide}px`;
 
 const setColor = (newColor) =>{
     currentColor = newColor
     currentMode = 'normal'
     activeMode(mode)
+}
+
+const setSize = (value) =>{
+    defaultSize = value
 }
 
 const setMode = (mode) =>{
@@ -41,13 +47,18 @@ const activeMode = (newMode) =>{
       }
 }
 
-const updateGrid = newValue =>{    
-    clearGrid()
-    createGrid(newValue)
+const updateGrid = (newValue) =>{    
+    setSize(newValue)
     updateValue(newValue)
+    clearGrid()
 }
 
 const clearGrid = () =>{
+    clear()
+    createGrid(defaultSize)
+}
+
+const clear = () =>{
     grid.innerHTML = ''
 }
 
